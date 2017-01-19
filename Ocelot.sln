@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Ocelot.Core", "Ocelot.Core\Ocelot.Core.fsproj", "{9AC136F6-6C05-4816-A4FD-26088C79B534}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelot.Core", "Ocelot.Core\Ocelot.Core.csproj", "{471B7AC1-F0AE-431A-9287-B2B890BA4DEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelot.CLI", "Ocelot.CLI\Ocelot.CLI.csproj", "{8EDC3E31-C930-4E75-8FE8-23F63CDFCC17}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Ocelot.Args", "Ocelot.Args\Ocelot.Args.fsproj", "{D0EAA8A2-BBE3-4717-A908-421292F8B574}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C188983-84EE-43FB-9DB4-A17F5F677A5B}"
+	ProjectSection(SolutionItems) = preProject
+		oc.cmd = oc.cmd
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9AC136F6-6C05-4816-A4FD-26088C79B534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AC136F6-6C05-4816-A4FD-26088C79B534}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AC136F6-6C05-4816-A4FD-26088C79B534}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AC136F6-6C05-4816-A4FD-26088C79B534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471B7AC1-F0AE-431A-9287-B2B890BA4DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471B7AC1-F0AE-431A-9287-B2B890BA4DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471B7AC1-F0AE-431A-9287-B2B890BA4DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471B7AC1-F0AE-431A-9287-B2B890BA4DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDC3E31-C930-4E75-8FE8-23F63CDFCC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDC3E31-C930-4E75-8FE8-23F63CDFCC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDC3E31-C930-4E75-8FE8-23F63CDFCC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDC3E31-C930-4E75-8FE8-23F63CDFCC17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EAA8A2-BBE3-4717-A908-421292F8B574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EAA8A2-BBE3-4717-A908-421292F8B574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EAA8A2-BBE3-4717-A908-421292F8B574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EAA8A2-BBE3-4717-A908-421292F8B574}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
