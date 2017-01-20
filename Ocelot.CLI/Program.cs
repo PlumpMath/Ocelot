@@ -21,12 +21,13 @@ namespace Ocelot.CLI
             }
             else
             {
-                Controller c = new Controller();
+                Controller c = new Controller(new ConsoleEnvironment());
                 if (!c.Load(options.File))
                 {
                     Console.WriteLine("Could not load assembly from file {0}.", options.File);
                     return 1;
                 }
+                c.AnalyzeMethods();
                 return 0;
             }
         }
