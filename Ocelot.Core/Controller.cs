@@ -55,7 +55,9 @@ namespace Ocelot
                     List<IMethodDefinition> methods = t.Methods.ToList();
                     foreach(IMethodDefinition m in methods)
                     {
-                        ControlAndDataFlowGraph<BasicBlock<Instruction>, Instruction> cdfg = ControlAndDataFlowGraph<BasicBlock<Instruction>, Instruction>.GetControlAndDataFlowGraphFor(MetadataReaderHost, m.Body);
+                        ControlAndDataFlowGraph<EnhancedBasicBlock<Instruction>, Instruction> cdfg = ControlAndDataFlowGraph<EnhancedBasicBlock<Instruction>, Instruction>.GetControlAndDataFlowGraphFor(MetadataReaderHost, m.Body);
+                        ControlGraphQueries<EnhancedBasicBlock<Instruction>, Instruction> query = new ControlGraphQueries<EnhancedBasicBlock<Instruction>, Instruction>(cdfg);
+                        
                         Environment.Message("  Method {0} has visibility {3}, {1} parameters, {2} local variables in body, {4} total basic blocks or nodes and {5} successor edges in CFG.\n", m.Name.Value, m.ParameterCount, 
                             m.Body.LocalVariables.Count(), m.Visibility.ToString(), cdfg.AllBlocks.Count,
                             cdfg.SuccessorEdges.Count);
