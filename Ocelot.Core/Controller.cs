@@ -56,7 +56,7 @@ namespace Ocelot
                     foreach(IMethodDefinition m in methods)
                     {
                         ControlAndDataFlowGraph<BasicBlock<Instruction>, Instruction> cdfg = ControlAndDataFlowGraph<BasicBlock<Instruction>, Instruction>.GetControlAndDataFlowGraphFor(MetadataReaderHost, m.Body);
-                        Environment.Message("  Method {0} has visibility {3}, {1} parameters, {2} local variables in body, {4} total basic blocks or nodes and {5} successor edges in CFG.", m.Name.Value, m.ParameterCount, 
+                        Environment.Message("  Method {0} has visibility {3}, {1} parameters, {2} local variables in body, {4} total basic blocks or nodes and {5} successor edges in CFG.\n", m.Name.Value, m.ParameterCount, 
                             m.Body.LocalVariables.Count(), m.Visibility.ToString(), cdfg.AllBlocks.Count,
                             cdfg.SuccessorEdges.Count);
                         
